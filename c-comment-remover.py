@@ -1,6 +1,16 @@
 from __future__ import print_function
 import sys, re, os
 
+# The code below will work for simple cases, but in general a regex cannot parse C (which is not a regular language).
+# A better apporach is a real parser, e.g. 
+# >>> test = '/* spam * spam */ eggs'
+# >>> import pyparsing
+# >>> comment = pyparsing.nestedExpr("/*", "*/").suppress()
+# >>> print comment.transformString(test)         
+# ' eggs'
+
+
+
 # for Python 2.7
 # Use and modification permitted without limit; credit to NerdFever.com requested.
 
